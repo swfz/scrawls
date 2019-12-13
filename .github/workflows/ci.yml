@@ -1,0 +1,17 @@
+---
+name: sample
+
+on:
+  push:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    name: 'hoge'
+    steps:
+      - uses: actions/checkout@master
+      - name: hoge
+        run: |
+          echo 'hello!'
